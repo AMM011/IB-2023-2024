@@ -35,9 +35,10 @@ clean_objs:
 
 # Regla para subir a GitHub
 github:
+	git pull
 	git add .
 	git commit -m "Práctica IB"
-	git push origin master
+	git push 
 
 # Evita conflictos con archivos de mismo nombre
 .PHONY: all clean clean_objs github
