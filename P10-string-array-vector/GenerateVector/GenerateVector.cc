@@ -31,18 +31,6 @@ std::vector<double> Vector::GenerateVector() {
   return vector;
 }  
 
-// std::vector<double> Vector::GenerateVector() {
-//   std::vector<double> vector {};
-//   vector.resize(this->get_size());
-//   vector.reserve(this->get_size());
-//   std::default_random_engine generator;
-//   std::uniform_real_distribution<double> distribution(this->get_lower(),this->get_upper());
-//   for (int i = 0; i < this->get_size(); i++) {
-//     vector[i] = distribution(generator);
-//   }
-//   return vector;
-// }  
-
 void Vector::ReadVector(const std::vector<double>& vector) {
   std::cout << "{ ";
   for (const auto& value : vector) {
@@ -78,3 +66,15 @@ void Vector::ReadLowerUpperSize(std::ostream& os){
   os << "El limite inferior es: " << this->get_lower() << std::endl;
   os << "El limite superior es: " << this->get_upper() << std::endl;
 }
+
+// std::vector<double> Vector::GenerateVector() {
+//   std::vector<double> vector {};
+//   vector.resize(this->get_size());
+//   vector.reserve(this->get_size());
+//   std::default_random_engine generator;
+//   std::uniform_real_distribution<double> distribution(this->get_lower(),this->get_upper());
+//   for (int i = 0; i < this->get_size(); i++) {
+//     vector[i] = distribution(generator);
+//   }
+//   return vector;
+// }  
