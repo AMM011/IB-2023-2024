@@ -16,12 +16,12 @@
 int main() {
   Vector vector {0, 0.f, 0.f};
   vector.EnterLowerUpperSize();
-  std::vector<double> generated_vector = vector.GenerateVector();
+  std::vector<double> my_vector = vector.GenerateVector();
   std::cout << "El vector generado es ";
-  vector.ReadVector(generated_vector);
+  vector.ReadVector(my_vector);
   std::cout << "El vector ordenado es ";
-  vector.SortVector(generated_vector);
+  vector.SortVector(my_vector);
 //   std::cout << "El vector sin repetidos es ";
-//   vector.UniqueVector(generated_vector);
+//   vector.UniqueVector(my_vector);
   return 0;
 }

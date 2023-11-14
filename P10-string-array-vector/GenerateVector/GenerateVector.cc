@@ -21,11 +21,11 @@ Vector::Vector(const int& size, const double& lower, const double& upper) {
 //no
 std::vector<double> Vector::GenerateVector() {
   std::vector<double> vector {};
-  vector.resize(this->get_size());
+  vector.reserve(this->get_size());
   std::default_random_engine generator;
   std::uniform_real_distribution<double> distribution(this->get_lower(),this->get_upper());
   for (int i = 0; i < this->get_size(); i++) {
-    vector[i] = distribution(generator);
+    vector.push_back(distribution(generator));
   }
   std::shuffle(vector.begin(), vector.end(), generator); // Shuffle the vector
   return vector;
@@ -45,11 +45,10 @@ std::vector<double> Vector::GenerateVector() {
 
 void Vector::ReadVector(const std::vector<double>& vector) {
   std::cout << "{ ";
-  for (int i = 0; i < this->get_size(); i++) {
-    std::cout << vector[i] << " ";
+  for (const auto& value : vector) {
+    std::cout << value << " ";
   }
-  std::cout << "}";
-  std::cout << std::endl;
+  std::cout << "}\n";
 }
 
 void Vector::SortVector(const std::vector<double>& vector) {

@@ -1,10 +1,10 @@
-# Nombre del ejecutable, modificar si se desea
+# Nombre del ejecutable
 TARGET = myprogram
 
 # Compilador
 CC = g++
 
-# Opciones de compilación, -g para incluir información de depuración
+# Opciones de compilación
 CFLAGS = -Wall -g
 
 # Encuentra todos los archivos .cc y .h
@@ -29,9 +29,15 @@ $(TARGET): $(OBJ)
 clean:
 	rm -f $(OBJ) $(TARGET)
 
-# Regla para limpiar objetos después de la construcción, para que no se suban al repositorio de git los .o
+# Regla para limpiar objetos después de la construcción
 clean_objs:
 	rm -f $(OBJ)
 
+# Regla para subir a GitHub
+github:
+	git add .
+	git commit -m "Práctica IB"
+	git push origin master
+
 # Evita conflictos con archivos de mismo nombre
-.PHONY: all clean clean_objs
+.PHONY: all clean clean_objs github
