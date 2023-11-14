@@ -50,5 +50,6 @@ int main() {
   std::vector<double> my_vector3 = vector.ConcatenateVectors(my_vector, my_vector2);
   std::cout << "El vector concatenado es ";
   vector.ReadVector(my_vector3);
+  
   return 0;
 }
