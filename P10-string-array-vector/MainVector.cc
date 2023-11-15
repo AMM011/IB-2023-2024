@@ -24,7 +24,7 @@ int main() {
   std::cout << "El vector ordenado es ";
   SortVector(my_vector);
   //  std::cout << "El vector sin repetidos es ";
-  //  vector.UniqueVector(my_vector);
+  //  UniqueVector(my_vector);
 
   // FASE II
   std::cout << "La suma de los elementos del vector es: ";
@@ -33,11 +33,11 @@ int main() {
   // FASE III
   MMAVector(my_vector);
   // std::cout << "El valor maximo del vector es: ";
-  // vector.MaximunValue(my_vector);
+  // MaximunValue(my_vector);
   // std::cout << "El valor minimo del vector es: ";
-  // vector.MinimunValue(my_vector);
+  // MinimunValue(my_vector);
   // std::cout << "El valor medio del vector es: ";
-  // vector.AverageValue(my_vector);
+  // AverageValue(my_vector);
 
   // FASE IV
   Vector vector2 {0, 0.f, 0.f};

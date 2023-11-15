@@ -124,8 +124,8 @@ void Vector::ReadLowerUpperSize(std::ostream& os){
 
 // std::vector<double> Vector::GenerateVector() {
 //   std::vector<double> vector {};
-//   vector.resize(this->get_size());
-//   vector.reserve(this->get_size());
+//   resize(this->get_size());
+//   reserve(this->get_size());
 //   std::default_random_engine generator;
 //   std::uniform_real_distribution<double> distribution(this->get_lower(),this->get_upper());
 //   for (int i = 0; i < this->get_size(); i++) {
