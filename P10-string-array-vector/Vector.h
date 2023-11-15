@@ -53,6 +53,7 @@ class Vector {
 
   // FASE IV
   std::vector<double> ConcatenateVectors(const std::vector<double>& vector1, const std::vector<double>& vector2);
+  void PropertiesVector(const std::vector<double>& vector);
 
   // E/R
   void EnterLowerUpperSize(std::istream& = std::cin);

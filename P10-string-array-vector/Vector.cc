@@ -100,6 +100,12 @@ std::vector<double> Vector::ConcatenateVectors(const std::vector<double>& vector
   return vector3;
 }
 
+void Vector::PropertiesVector(const std::vector<double>& vector) {
+  this->set_size(vector.size());
+  this->set_lower(vector.front());
+  this->set_upper(vector.back());  
+}
+
 // E/R
 void Vector::EnterLowerUpperSize(std::istream& is){
   std::cout << "Introduzca el tamaño del vector: ";
