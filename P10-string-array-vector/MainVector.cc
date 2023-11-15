@@ -6,7 +6,8 @@
  *
  * @author Alfredo
  * @date 14/11/2023
- * @brief este programa devuelve un vector de double aleatorios
+ * @brief Este programa se encarga de realizar diferentes operaciones con vectores, como generarlos, leerlos, ordenarlos, etc. 
+ * @brief Esta Clase esta muy orientada a lo que solicita la práctica, es como si fuera funciones y no tanto orientados a objetos
  * @see https://google.github.io/styleguide/cppguide.html
  *
  */
@@ -44,12 +45,13 @@ int main() {
   vector2.EnterLowerUpperSize();
   std::vector<double> my_vector2 = vector2.GenerateVector();
   std::cout << "El vector generado es ";
-  vector.ReadVector(my_vector2);
+  vector2.ReadVector(my_vector2);
   std::cout << "El vector ordenado es ";
-  vector.SortVector(my_vector2);
+  vector2.SortVector(my_vector2);
   std::vector<double> my_vector3 = vector.ConcatenateVectors(my_vector, my_vector2);
+  Vector vector3 {0, 0.f, 0.f};
   std::cout << "El vector concatenado es ";
-  vector.ReadVector(my_vector3);
+  vector2.ReadVector(my_vector3);
   
   return 0;
 }

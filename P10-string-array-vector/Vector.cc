@@ -6,7 +6,7 @@
  *
  * @author Alfredo
  * @date 14/11/2023
- * @brief este programa devuelve un vector de double aleatorios
+ * @brief Este programa se encarga de realizar diferentes operaciones con vectores
  * @see https://google.github.io/styleguide/cppguide.html
  *
  */
@@ -94,7 +94,7 @@ void Vector::MMAVector(std::vector<double>& vector) {
 // FASE IV
 std::vector<double> Vector::ConcatenateVectors(const std::vector<double>& vector1, const std::vector<double>& vector2) {
   std::vector<double> vector3 {};
-  vector3.reserve(vector1.size() + vector2.size());
+  vector3.reserve(this->get_size() + vector2.size());
   vector3.insert(vector3.end(), vector1.begin(), vector1.end());
   vector3.insert(vector3.end(), vector2.begin(), vector2.end());
   return vector3;

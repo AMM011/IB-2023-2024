@@ -6,7 +6,7 @@
  *
  * @author Alfredo
  * @date 14/11/2023
- * @brief este programa devuelve un vector de double aleatorios
+ * @brief Este programa se encarga de realizar diferentes operaciones con vectores
  * @see https://google.github.io/styleguide/cppguide.html
  *
  */
