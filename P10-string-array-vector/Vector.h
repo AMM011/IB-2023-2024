@@ -37,22 +37,6 @@ class Vector {
   // Methods
   // FASE I
   std::vector<double> GenerateVector();
-  void ReadVector(const std::vector<double>& vector);
-  void SortVector(const std::vector<double>& vector);
-  void UniqueVector(const std::vector<double>& vector);
-
-  // FASE II
-  void SumVector(const std::vector<double>& vector);
-
-  // FASE III
-  void MaximunValue(const std::vector<double>& vector);
-  void MinimunValue(const std::vector<double>& vector);
-  void AverageValue(const std::vector<double>& vector);
-  // Unify the three methods above
-  void MMAVector(std::vector<double>& vector);
-
-  // FASE IV
-  std::vector<double> ConcatenateVectors(const std::vector<double>& vector1, const std::vector<double>& vector2);
   void PropertiesVector(const std::vector<double>& vector);
 
   // E/R
@@ -64,6 +48,24 @@ class Vector {
   double lower_;
   double upper_;
 };
+
+// FASE I
+void ReadVector(const std::vector<double>& vector);
+void SortVector(const std::vector<double>& vector);
+void UniqueVector(const std::vector<double>& vector);
+
+// FASE II
+void SumVector(const std::vector<double>& vector);
+
+// FASE III
+void MaximunValue(const std::vector<double>& vector);
+void MinimunValue(const std::vector<double>& vector);
+void AverageValue(const std::vector<double>& vector);
+// Unify the three methods above
+void MMAVector(std::vector<double>& vector);
+
+// FASE IV
+std::vector<double> ConcatenateVectors(const std::vector<double>& vector1, const std::vector<double>& vector2);
 
 // void EnterLowerUpper(int& lower, int& upper);
 // void EnterSize(int& size);

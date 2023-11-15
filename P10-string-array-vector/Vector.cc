@@ -32,7 +32,7 @@ std::vector<double> Vector::GenerateVector() {
   return vector;
 }  
 
-void Vector::ReadVector(const std::vector<double>& vector) {
+void ReadVector(const std::vector<double>& vector) {
   std::cout << "{ ";
   for (const auto& value : vector) {
     std::cout << value << " ";
@@ -40,21 +40,21 @@ void Vector::ReadVector(const std::vector<double>& vector) {
   std::cout << "}\n";
 }
 
-void Vector::SortVector(const std::vector<double>& vector) {
+void SortVector(const std::vector<double>& vector) {
   std::vector<double> sorted_vector = vector;
   std::sort(sorted_vector.begin(), sorted_vector.end());
-  this->ReadVector(sorted_vector);
+  ReadVector(sorted_vector);
 }
 
-void Vector::UniqueVector(const std::vector<double>& vector) {
+void UniqueVector(const std::vector<double>& vector) {
   std::vector<double> unique_vector = vector;
   std::sort(unique_vector.begin(), unique_vector.end());
   unique_vector.erase(std::unique(unique_vector.begin(), unique_vector.end()), unique_vector.end());
-  this->ReadVector(unique_vector);
+  ReadVector(unique_vector);
 }
 
 // FASE II
-void Vector::SumVector(const std::vector<double>& vector) {
+void SumVector(const std::vector<double>& vector) {
   double result {0.0}; 
   for(size_t i {0}; i < vector.size(); ++i) {
     result += vector.at(i);
@@ -63,25 +63,25 @@ void Vector::SumVector(const std::vector<double>& vector) {
 }
 
 // FASE III
-void Vector::MaximunValue(const std::vector<double>& vector) {
+void MaximunValue(const std::vector<double>& vector) {
   std::vector<double> sorted_vector = vector;
   std::sort(sorted_vector.begin(), sorted_vector.end());
   std::cout << sorted_vector.back() << std::endl;
 }
 
-void Vector::MinimunValue(const std::vector<double>& vector) {
+void MinimunValue(const std::vector<double>& vector) {
   std::vector<double> sorted_vector = vector;
   std::sort(sorted_vector.begin(), sorted_vector.end());
   std::cout << sorted_vector.front() << std::endl;
 }
 
-void Vector::AverageValue(const std::vector<double>& vector) {
+void AverageValue(const std::vector<double>& vector) {
   double sum = std::accumulate(vector.begin(), vector.end(), 0.0);
   double average = sum / vector.size();
   std::cout << average << std::endl;
 }
 
-void Vector::MMAVector(std::vector<double>& vector) {
+void MMAVector(std::vector<double>& vector) {
   std::vector<double> sorted_vector = vector;
   std::sort(sorted_vector.begin(), sorted_vector.end());
   std::cout << "El valor maximo del vector es: " << sorted_vector.back() << std::endl;
@@ -92,9 +92,9 @@ void Vector::MMAVector(std::vector<double>& vector) {
 }
 
 // FASE IV
-std::vector<double> Vector::ConcatenateVectors(const std::vector<double>& vector1, const std::vector<double>& vector2) {
+std::vector<double> ConcatenateVectors(const std::vector<double>& vector1, const std::vector<double>& vector2) {
   std::vector<double> vector3 {};
-  vector3.reserve(this->get_size() + vector2.size());
+  vector3.reserve(vector1.size() + vector2.size());
   vector3.insert(vector3.end(), vector1.begin(), vector1.end());
   vector3.insert(vector3.end(), vector2.begin(), vector2.end());
   return vector3;
