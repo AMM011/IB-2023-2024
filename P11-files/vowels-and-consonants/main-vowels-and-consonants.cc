@@ -14,10 +14,7 @@
 #include "vowels-and-consonants.h"
 
 int main(int argc, char *argv[]) {
-  if (argc < 2) {
-    std::cerr << "Uso: " << argv[0] << " <nombre_del_fichero>\n";
-    return 1;
-  }
+  Usage(argc, argv);
   std::string file_name {argv[1]};
   VowelsAndConsonantCounter(file_name);
   return 0;

@@ -17,6 +17,7 @@
 #include <string>
 #include <cctype>
 
+void Usage(int argc, char *argv[]);
 void CreateFile(const std::string& file_name);
 void AddText(const std::string& file_name);
 void VowelsAndConsonantCounter(const std::string& file_name);

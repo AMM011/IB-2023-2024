@@ -13,6 +13,13 @@
 
 #include "vowels-and-consonants.h"
 
+void Usage(int argc, char *argv[]) {
+  if (argc < 2) {
+    std::cerr << "Uso: " << argv[0] << " <nombre_del_fichero>\n";
+    return;
+  }
+}
+
 // Crea un fichero
 void CreateFile(const std::string& file_name) {
   std::ofstream archivo;
@@ -97,6 +104,7 @@ void VowelsAndConsonantCounter(const std::string& file_name) {
       }
     }
   }
+  archivo.close();
   std::cout << "La palabra con mayor número de vocales es: " << vowels << std::endl;
   std::cout << "La palabra con mayor número de consonantes es: " << consonant << std::endl;
 }
