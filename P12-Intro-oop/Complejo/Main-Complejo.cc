@@ -32,5 +32,20 @@ int main () {
   std::cout << "La resta de los complejos es: ";
   resultado = complejo1 - complejo2;
   std::cout << resultado;
+
+  // Modifiers
+  resultado = complejo1 * complejo2;
+  std::cout << "La multiplicación de los complejos es: ";
+  std::cout << resultado;
+  resultado = complejo1 / complejo2;
+  std::cout << "La división de los complejos es: ";
+  std::cout << resultado;
+  // Modifiers Methods
+  std::cout << "El conjugado del complejo 1 es: ";
+  complejo1.Conjugado();
+  std::cout << "El valor absoluto del complejo 1 es: ";
+  complejo1.ValorAbsoluto();
+  std::cout << "El expoencial del complejo 1 es: ";
+  complejo1.Exponente();
   return 0;
 }

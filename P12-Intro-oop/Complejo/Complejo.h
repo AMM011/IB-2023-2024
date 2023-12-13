@@ -15,15 +15,15 @@
 #include <cmath>
 
 struct composicion {
-    double real;
-    double imaginario;
+  double real;
+  double imaginario;
 
-    // Constructor para inicializar los valores real e imaginario
-    composicion(double r = 0.0, double i = 0.0) : real(r), imaginario(i) {}
+  // Constructor para inicializar los valores real e imaginario
+  composicion(double r = 0.0, double i = 0.0) : real(r), imaginario(i) {}
 };
 
 class Complejo {
-public:
+  public:
     // Constructor
     Complejo(const composicion& number) : number_(number) {}
 
@@ -39,6 +39,14 @@ public:
     Complejo operator+(const Complejo& number) const;
     Complejo operator-(const Complejo& number) const;
 
-private:
+    // Modifiers
+    Complejo operator*(const Complejo& number) const;
+    Complejo operator/(const Complejo& number) const;
+    // Modifiers Methods
+    void Conjugado() const ;
+    void ValorAbsoluto() const;
+    void Exponente() const;
+
+  private:
     composicion number_;
 };
